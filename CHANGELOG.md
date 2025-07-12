@@ -18,6 +18,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - 
+## [0.0.5] - 2025-07-12
+
+### Added
+
+
+### Fixed
+
+- Fixed the TypeScript error about union types being too complex. 
+
+### Changed
+
+- 
+
+### Removed
+
+-
+
+## [0.0.4] - 2025-07-12
+
+### Added
+
+
+### Fixed
+
+- Fixed the tailwind css import. This is to be done by the user installing the library.Add this line to the content array of tailwind.config.ts file "'./node_modules/bytes-ui/**/*.{html,js,svelte,ts}'" 
+
+### Changed
+
+- 
+
+### Removed
+
+-
 
 ## [0.0.3] - 2025-07-12
 
