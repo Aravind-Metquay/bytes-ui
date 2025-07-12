@@ -21,7 +21,7 @@
 		buttonVariants({
 			variant,
 			size,
-			className : className as ClassNameValue
+			class: className as ClassNameValue
 		})
 	)}
 	{...rest}
