@@ -1,16 +1,35 @@
 <script lang="ts">
-	import { Button } from 'bits-ui';
+	import { Button as ButtonPrimitive } from 'bits-ui';
+	import { cn } from '$lib/utils.js';
+	import { buttonVariants, type ButtonProps } from './index.js';
+	import type { ClassNameValue } from 'tailwind-merge';
+
 	let {
 		children,
-		ref = $bindable(null),
+		class: className,
+		ref = $bindable(null), 
+		variant = 'primary',
+		size = 'md',
 		...rest
-	} = $props();
+	}: ButtonProps = $props();
 </script>
 
-	<Button.Root
-		bind:ref
-		class="text-white inline-flex px-3 py-1 rounded-lg bg-[#7F56D9] border border-[#7F56D9] hover:bg-[#6941C6] hover:border-[#6941C6] active:scale-[0.98] active:transition-all shadow-sm"
-		{...rest}
-		>
-		{@render children()}
-	</Button.Root>
+
+<ButtonPrimitive.Root
+	bind:ref
+	class={cn(
+		buttonVariants({
+			variant,
+			size,
+			className : className as ClassNameValue
+		})
+	)}
+	{...rest}
+>
+	{#if children}
+		{@render children({
+			variant,
+			size,
+		})}
+	{/if}
+</ButtonPrimitive.Root>
