@@ -18,6 +18,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Removed
 
 - 
+
+
+## [0.0.6] - 2025-07-13
+
+### Added
+- Dialog component
+
+### Fixed
+
+- Fixed error that occurs when SSR is used in sveltekit projects. 
+
+### Changed
+
+- svelte config file 
+- package json file
+
+### Removed
+
+-
+
+
 ## [0.0.5] - 2025-07-12
 
 ### Added
